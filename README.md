@@ -4,7 +4,7 @@
 - 💞️ I’m looking to collaborate on python projects
 - 📫 How to reach me: through github
 - 😄 Pronouns: he/him
-- ⚡ Fun fact: time zone: GMT +3
+- ⚡ Time zone: GMT +3
 
 <!---
 d11157/d11157 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
