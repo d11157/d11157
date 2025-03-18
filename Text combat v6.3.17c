@@ -1,0 +1,236 @@
+show_intro = int(input('Show intro? (0, 1) '))
+if show_intro == 1:
+    import turtle
+    t = turtle.Turtle()
+    t.speed(10)  # 1:slowest, 3:slow, 5:normal, 10:fast, 0:fastest
+    t.backward(100)
+    t.left(90)
+    t.forward(75)
+    t.left(90)
+    t.forward(20)
+    t.backward(40)
+    t.forward(20)
+    t.left(90)
+    t.forward(75)
+    t.left(90)
+    t.forward(50)
+    t.left(90)
+    t.forward(2)
+    t.right(90)
+    t.forward(20)
+    t.backward(20)
+    t.left(90)
+    t.forward(40)
+    t.right(90)
+    t.forward(20)
+    t.backward(20)
+    t.left(90)
+    t.forward(33)
+    t.right(90)
+    t.forward(20)
+    t.backward(20)
+    t.right(90)
+    t.forward(75)
+    t.left(90)
+    t.forward(40)
+    t.left(66)
+    t.forward(80)
+    t.backward(40)
+    t.left(45)
+    t.forward(40)
+    t.backward(79)
+    t.right(111)
+    t.forward(40)
+    t.left(90)
+    t.forward(75)
+    t.right(90)
+    t.forward(20)
+    t.backward(40)
+    t.forward(20)
+    t.right(90)
+    t.forward(75)
+    t.right(90)
+    t.forward(180)
+    t.left(90)
+    t.forward(2)
+    t.left(90)
+    t.forward(40)
+    t.backward(40)
+    t.right(90)
+    t.forward(75)
+    t.left(90)
+    t.forward(40)
+    t.backward(40)
+    t.left(90)
+    t.forward(77)
+    t.right(90)
+    t.forward(60)
+    t.right(90)
+    t.forward(2)
+    t.left(90)
+    t.forward(30)
+    t.right(90)
+    t.forward(75)
+    t.right(90)
+    t.forward(30)
+    t.right(90)
+    t.forward(77)
+    t.right(90)
+    t.forward(70)
+    t.right(100)
+    t.forward(78)
+    t.backward(78)
+    t.left(20)
+    t.forward(78)
+    t.left(160)
+    t.forward(78)
+    t.right(160)
+    t.forward(78)
+    t.backward(78)
+    t.left(80)
+    t.forward(30)
+    t.right(90)
+    t.forward(75)
+    t.left(90)
+    t.forward(30)
+    t.left(90)
+    t.forward(40)
+    t.left(90)
+    t.forward(30)
+    t.right(90)
+    t.forward(2)
+    t.right(90)
+    t.forward(30)
+    t.left(90)
+    t.forward(31)
+    t.left(90)
+    t.forward(30)
+    t.right(90)
+    t.forward(2)
+    t.right(90)
+    t.forward(60)
+    t.right(100)
+    t.forward(78)
+    t.backward(78)
+    t.left(20)
+    t.forward(78)
+    t.backward(30)
+    t.right(100)
+    t.forward(18)
+    t.backward(18)
+    t.left(100)
+    t.backward(48)
+    t.left(80)
+    t.forward(40)
+    t.right(90)
+    t.forward(2)
+    t.left(90)
+    t.forward(20)
+    t.backward(40)
+    t.forward(20)
+    t.right(90)
+    t.forward(73)
+    t.backward(75)
+    t.left(90)
+    t.backward(700)
+    t.forward(1500)
+
+print('Text combat v6.3.16a test')
+print('=====================================')
+
+win=' wins!'
+draw='Draw!'
+lines='-------------------------------------'
+two_dots=': '
+
+
+
+def gm_sndbx_btl_skill_usg(gm_sndbx_user_skill, skill, ch_param, ch_param2, numb):
+    if gm_sndbx_user_skill == skill:
+        ch_param += numb
+        ch_param2 -= numb
+
+def gm_sndbx_btl_stat(name, atk, hp):
+    print(name)
+    print('ATK: ', atk)
+    print('HP: ', hp)
+    print(lines)
+
+def gm_sndbx_rd_end(hp1, hp2, name, res, end_code_sndbx=0):
+    if hp1 > hp2:
+        end_code_sndbx -= 1
+        print(name + res)
+        print(lines)
+
+def gm_sndbx_rd_end_draw(hp1, hp2, end_code_sndbx=0):
+    if hp1 == hp2:
+        end_code_sndbx -= 1
+        print(draw)
+        print(lines)
+
+def gm_sandbox_start():
+    ch1_name=input("Enter name of the first character: ")
+    print(lines)
+    ch2_name=input("Enter name of the second character: ")
+    print(lines)
+    enter_ch1_atk=("Enter ATK " + ch1_name + two_dots)
+    enter_ch2_atk=("Enter ATK " + ch2_name + two_dots)
+    enter_ch1_hp=("Enter HP " + ch1_name + two_dots)
+    enter_ch2_hp=("Enter HP " + ch2_name + two_dots)
+    ch1_skill=int(input("Choose a skill for " + ch1_name + two_dots + "Vampire; " + "Reduction" + '(1, 2)' + two_dots))
+    print(lines)
+    ch2_skill=int(input("Choose a skill for " + ch2_name + two_dots + "Vampire; " + "Reduction" + '(1, 2)' + two_dots))
+    print("Enter ATK and HP points: ")
+    print(lines)
+    ch1_atk=int(input(enter_ch1_atk))
+    print(lines)
+    ch1_hp=int(input(enter_ch1_hp))
+    print(lines)
+    ch2_atk=int(input(enter_ch2_atk))
+    print(lines)
+    ch2_hp=int(input(enter_ch2_hp))
+    print(lines)
+    ch1_hp -= ch2_atk
+    ch2_hp -= ch1_atk
+    gm_sndbx_btl_skill_usg(ch1_skill, 1, ch1_hp, ch2_hp, 5)
+    gm_sndbx_btl_skill_usg(ch2_skill, 1, ch2_hp, ch1_hp, 5)
+    gm_sndbx_btl_skill_usg(ch1_skill, 2, ch1_atk, ch2_atk, 2.5)
+    gm_sndbx_btl_skill_usg(ch2_skill, 2, ch2_atk, ch1_atk, 2.5)
+    gm_sndbx_btl_stat(ch1_name, ch1_atk, ch1_hp)
+    gm_sndbx_btl_stat(ch2_name, ch2_atk, ch2_hp)
+    while ch1_hp and ch2_hp > 0:
+        gm_sndbx_rd_end(ch1_hp, ch2_hp, ch1_name, win)
+        gm_sndbx_rd_end(ch2_hp, ch1_hp, ch2_name, win)
+        gm_sndbx_rd_end_draw(ch1_hp, ch2_hp)
+        gm_sandbox_start()
+
+def gm_normal_start():
+    gm_normal_dif_arg = int(input('Choose difficulty (0 - easy, 1 - medium, 2 - hard): '))
+    close_player_dmg_arg = 0
+    long_player_dmg_arg = 0
+    gm_normal_weap1 = int(input('Choose the first weapon (1 - sword, 2 - bow) '))
+    gm_normal_weap2 = int(input('Choose the second weapon (or upgrade previous) (1, 2) '))
+    if gm_normal_weap1 == 1:
+        close_player_dmg_arg += 1
+    if gm_normal_weap2 == 1:
+        close_player_dmg_arg += 1
+    if gm_normal_weap1 == 2:
+        long_player_dmg_arg += 1
+    if gm_normal_weap2 == 2:
+        long_player_dmg_arg += 1
+    close_player_dmg = 100 * close_player_dmg_arg - gm_normal_dif_arg * 10
+    long_player_dmg = 100 * long_player_dmg_arg - gm_normal_dif_arg * 10
+    print('Close damage:')
+    print(close_player_dmg)
+    print('Long damage:')
+    print(long_player_dmg)
+
+def main_setup():
+    gamemode=int(input('Choose a gamemode (1 - normal, 2 - sandbox): '))
+    print(lines)
+    if gamemode == 1:
+        gm_normal_start()
+    if gamemode == 2:
+        gm_sandbox_start()
+
+main_setup()
